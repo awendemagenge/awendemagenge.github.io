@@ -8,12 +8,21 @@
 
 </head>
 
-<body>
+<body style="background-color: grey;">
 
     <script>
-        let a=prompt("Do you agree?"),b="you agreed",c="you canceled the excusion"
-let c=(a,b,c)=>confirm(a)?b:c
-alert(c(a,b,c))
+ let question=prompt("question?")       
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  () => alert("You agreed."),
+  () => alert("You canceled the execution.")
+);
+
     </script>
 
 </body>
