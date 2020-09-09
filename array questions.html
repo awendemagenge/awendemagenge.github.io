@@ -10,6 +10,8 @@
 
 <body style="background-color:grey">
     1.Array length would be 4<br /></br>
+
+    
     2. <code> let styles = ["jazz", "Blues"]<br/>
     styles.push("Rock-n-Roll")<br/>
     if (styles.length % 2 !== 0)<br/> {
@@ -18,14 +20,15 @@
         styles.unshift("rap", "reggae")
     }</code>
     <br/><br/>
+
+
     3.<code>function() {
         alert( this ) </code>;
       because function is called as an object
       <br/><br/>
 
-    4. 
 
-
+    4. see console
     <script>
         let styles = ["jazz", "Blues"]
         styles.push("Rock-n-Roll")
@@ -36,6 +39,62 @@
         }
 
     </script>
+    <br/>
+
+5.see console
+<script> 
+
+function sumInput(){
+    let numbers=[]
+    while(true){
+        let value=prompt("Enter number?,0")
+        if(value===""||value===null||isFinite(value))break;
+        numbers.push(+value);}
+        let sum=0
+        for(let number of numbers){
+            sum=sum+number
+        }return sum
+    }
+
+
+alert( sumInput() );
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
