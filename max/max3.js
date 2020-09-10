@@ -12,23 +12,72 @@
         return c
     }
     /**
- * Returns true or false based on vowel or not
+ * Returns true or not
  *
- * @param {number} a is number
- * @param {number} b is number
- * @return {number} c is a number
- */
+ * @param {string} word
+ * @return {number} checks vowel or notr**/
 
 
-    function isVowel(string){
+function isVowel(string){
 
-        if(string==="a"||string==="e"
-        ||string==="i"||string==="o"
-        ||string==="u"){
-    
-            return true
-        }return false
-    }
+    if(string==="a"||string==="e"
+    ||string==="i"||string==="o"
+    ||string==="u"){
+
+        return true
+    }return false
+}
+/**
+ * Returns true or not
+ * @param {arr} word
+ * @param {i} number
+ * @return {number} arr their lengths are greater than i**/
+
+function filterLongWords(arr, i) {
+    let newArr = []
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j].length > i) { newArr.push(arr[j]) }
+    } return newArr
+  
+  
+  }
+
+  /**
+ * Returns reversed string
+ * @param {string} number
+ * @return {string} reversed string i**/
+  
+
+
+  function reverse(string) {
+    let s = ""
+    for (let i = string.length - 1; i >= 0; i--) {
+      s = s + string[i]
+    } return s
+  
+  }
+  /**
+ * Returns reversed string
+ * @param {arr} number
+ * @return {number} sum && multiplication i**/
+
+  function sum(arr){
+    let sum=0
+    for(let i=0;i<arr.length;i++){
+      sum=arr[i]+sum
+    }return sum
+ 
+  }
+ 
+ 
+ function multiply(arr){
+    let multiply=1
+    for(let i=0;i<arr.length;i++){
+      multiply=arr[i]*multiply
+    }return multiply
+ 
+  }
+
 
 
 

@@ -1,6 +1,5 @@
 /* eslint-disable */ 
-let arr = ["hdddi", "byfffffe"]
-let i = 3
+
 
 function filterLongWords(arr, i) {
   let newArr = []
