@@ -58,11 +58,7 @@ If salaries is empty, then the result must be 0.*/
  * @return {number} total salary/total number
  */
 
-let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130
-}
+
 
 function sumSalaries(salaries) {
   let sum = 0
@@ -96,21 +92,15 @@ P.S. Use typeof to check for a number here.*/
  * @return {number} c is a number
  */
 
-let menu = {
-  width: 200,
-  height: 300,
-  title: "my menu"
-}
 
-function multiplyNumeric(menu) {
-  for (let key in menu) {
-    let x = Number.isNaN(menu[key])
-    if (x === false) {
-     menu[key]= menu[key]*2
+
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+      if (typeof obj[key] == 'number') {
+        obj[key]=obj[key]* 2;
+      }
     }
-  
-    }
-}
+  }
 
 /*5 Using "this" in object literal
 Here the function makeUser returns an object.
