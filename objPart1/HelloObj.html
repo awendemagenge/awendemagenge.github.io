@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
     <!-- add mocha css, to show results -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
@@ -16,20 +16,35 @@
         let assert = chai.assert;
     </script>
 </head>
- 
-<body>
- 
+
+<body style="background-color: grey;">
+    <br />
+    <div> <br /><code>1.const user = {}<br />
+            user.name = "John"<br />
+            user.surname = "Smith"<br />
+            user.name = "pete"<br />
+            delete user.name </code></div><br />
+
+
     <script src="HelloObj.js">    </script>
- 
+
     <!-- the script with tests (describe, it...) -->
     <script src="emptyObjTest.js"></script>
-    
- 
+    <right><a href="index.html">Part two(library data) ASSIGNMENT link</a> </right>
+
+
     <!-- the element with id="mocha" will contain test results -->
     <div id="mocha"></div>
- 
+
+
     <!-- run tests! -->
     <script>
         mocha.run();
     </script>
+    //5.returns nothing because "this" should locate a function plus ref property is given to other not name<br />
+    //6.returns an error
+    <br />
+
+
+
 </body>

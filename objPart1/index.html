@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Book List</title>
+    <script src="books.js"></script>
+</head>
+
+<body style="background-color:grey">
+    <div>
+        Book Title<br />
+        <input style="background-color: bisque;" type="text" id="title" size="80" />
+    </div>
+    <div>
+        Author<br />
+        <input style="background-color: bisque;" type="text" id="author" size="80" />
+    </div>
+    <div>
+        Library Id<br />
+        <input style="background-color: bisque;" type="text" id="ID" size="80" />
+    </div>
+    <br />
+    <input style="background-color: bisque;"type="button" value="Add Book to the Library" id="Addlibrary" onclick="Addlibrary();" />
+    <input style="background-color: bisque;"type="button" value="Show Titles" id="ShowTitles" onclick="ShowTitles();" />
+    <input style="background-color: bisque;"type="button" value="Show authors" id="ShowAuthors" onclick="Showauthors();" />
+    <input style="background-color: bisque;"type="button" value="Show ID" id="ShowId" onclick="ShowID();" />
+
+    <p>
+        <textarea style="background-color: bisque;" id="displayArea" rows="10" cols="80"></textarea>
+    </p>
+
+</body>
+
+</html>

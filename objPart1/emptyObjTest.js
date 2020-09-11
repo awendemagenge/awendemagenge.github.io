@@ -1,5 +1,31 @@
 "use strict";
-/* global isEmpty,sumSalaries,multiplyNumeric assert isEmpty,sumSalaries,multiplyNumeric */
+/*eslint-disable*/
+/* global isEmpty,sumSalaries,multiplyNumeric,sum,multiply assert,sum(),calculator.sum,calculator.multiply isEmpty,sumSalaries,multiplyNumeric */
+describe("the sum is", function() {
+    calculator.value1=2
+    calculator.value1=3
+    calculator.sum=5
+    
+      it("5", function() {
+        assert.equal(5, calculator.sum);
+        
+      });
+    
+  
+    });
+  
+    describe("the multiplication is?", function() {
+      calculator.value1=2
+      calculator.value1=3
+      calculator.multiply=6
+      
+        it("6", function() {
+          assert.equal(6, calculator.multiply);
+          
+        });
+      
+    
+      });
 
 
 describe("is object empty?", function() {
@@ -41,3 +67,8 @@ describe("is object empty?", function() {
     });
   
   });
+  
+
+  
+
+
