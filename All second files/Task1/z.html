@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+ 
+<body>
+ 
+    <script src="filterRange.js"></script>
+    <script src="Filter_Range_InPlace.js"></script>
+    <script src="Translate_width.js"></script>
+    <script src="decreasing.js"></script>
+    <script src="extendable._calculator.js"></script>
+    <script src="keyed_obj_from_Array.js"></script>
+    <script src="shuffel_an_array.js"></script>
+
+   
+     
+  
+    <!-- the script with tests (describe, it...) -->
+ 
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+ 
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+    <li><a href="Accumulator.html">Accumulator Test</a>
+    <li><a href="calculator.html">Calculator Test</a>
+    <li><a href="constr.html">constructing functions</a> 
+    <li><a href="copy_and_sort.html">copy_and_sort</a> 
+    <li><a href="get _age.html">get average age</a> 
+    <li><a href="map_to_names.html">name from object</a>  
+    <li><a href="map_to_obj.html">object by id</a> 
+    <li><a href="shuffel_an_array.html">shuffel an array</a>     
+    <li><a href="sort_users_by_age.html">sort users by age</a> 
+    <li><a href="unique_array.html">unique arrays</a> 
+        
+</body>
