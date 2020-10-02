@@ -1,0 +1,26 @@
+
+{
+
+const numArray = [5,0, 7, 77,-20, 300, 51, 2]
+const peopleArray = [{name: "Sam", age: 15}, {name: "William", age: 6}, {name: "Lucy", age: 13}, {name: "Barney", age: 80}]
+
+
+function FindEven(){
+    return numArray.filter(item=>item%2===0)
+  }
+  console.log(FindEven())
+
+
+
+  describe("Finds Even from the given array of ", function () {
+    
+     
+    it("numbers ", function () {
+      assert.deepEqual(FindEven(numArray), [0 ,-20 ,300 ,2 ]  );
+    });
+ 
+  });
+
+
+
+}
