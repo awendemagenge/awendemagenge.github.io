@@ -1,0 +1,60 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head >
+    <meta charset="UTF-8" />
+    <title>constructin function</title>
+    <script>
+function printName(node,target){
+  if(node.descendents===null){
+    if(node.value===target){
+      return true
+    }else{return false}
+  }
+  else{
+    let childResult=false
+    if(node.value===target){
+      return true
+    }
+    for(let child of node.descendents){
+      childResult=printName(child,target)
+      if(childResult===true){
+        return true
+      }
+    }
+      return false
+    }
+  }
+
+
+class TreeNode {
+ constructor(value) {
+ this.value = value;
+ this.descendents = [];
+ }}
+// create nodes with values
+const abe = new TreeNode('Abe');
+const homer = new TreeNode('Homer');
+const bart = new TreeNode('Bart');
+const lisa = new TreeNode('Lisa');
+const maggie = new TreeNode('Maggie');
+// associate root with is descendents
+abe.descendents.push(homer);
+homer.descendents.push(bart, lisa, maggie);
+
+let printResult=printName(abe)
+console.log(printResult)
+
+
+
+    </script>
+  </head>
+  
+  <body style="background-color:grey">
+    <br\>
+      <h4>see console</h4>
+  </body>
+  
+  
+  </html>
