@@ -8,9 +8,9 @@
     let x=peopleArray.filter(item=>item.age%2!==0)
     let y=x.map(item=>item.age)
     let z=y.reduce((accumulator,item)=>accumulator+item,0)
-    return z/2
+    return z/y.length
     }
-    console.log(sumNumbers())
+    console.log(findAverages())
     
     describe("Finds the average of age", function () {
                 
