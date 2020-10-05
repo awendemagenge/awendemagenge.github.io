@@ -1,0 +1,39 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head >
+    <meta charset="UTF-8" />
+    <title>constructin function</title>
+    <script>
+function Counter() {
+  let count = 0;
+
+  this.up = function() {
+    return ++count;
+  };
+  this.down = function() {
+    return --count;
+  };
+}
+
+let counter = new Counter();
+
+alert( counter.up() ); // ?
+alert( counter.up() ); // ?
+alert( counter.down() ); // ?
+
+
+
+    </script>
+  </head>
+  
+  <body style="background-color:grey">
+    <br\>
+      <h4>alert( counter.up() );alerts 1 <br/>
+        alert( counter.up() );alerts 2 <br/>
+        alert( counter2() );alerts 1 <br/>see console</h4>
+  </body>
+  
+  
+  </html>

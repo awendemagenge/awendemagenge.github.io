@@ -1,0 +1,65 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head >
+    <meta charset="UTF-8" />
+    <title>node Tree</title>
+    <script>
+/*body: null
+div: null
+label: Name
+input: this was typed by a user
+p: This is text in the a paragraph*/
+
+let node3 = {
+ name: "p",
+ value: "This is text in the a paragraph",
+ children: null
+};
+let node4 = {
+ name: "label",
+ value: "Name", 
+ children: null
+};
+let node5 = {
+ name: "input",
+ value: "this was typed by a user",
+ children: null
+};
+let node2 = {
+ name: "div",
+ value: null,
+ children: [node4, node5]
+};
+
+let node1 = {
+  name: "body",
+  children: [node2, node3],
+  value: null,}
+
+function printAll(node){
+  if(node.children===null){
+    console.log(node.name+" : "+node.value)
+  }
+  else{
+    
+    console.log(node.name+" : "+node.value)
+    for(let item of node.children){
+    printAll(item)}
+  }
+}
+printAll(node1)
+
+
+
+    </script>
+  </head>
+  
+  <body style="background-color:grey">
+    <br\>
+      <h4>see console</h4>
+  </body>
+  
+  
+  </html>

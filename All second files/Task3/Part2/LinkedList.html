@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+  <meta charset="UTF-8" />
+  <title>constructin function</title>
+  <script>
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+
+function printList(list){
+  if(list.next===null){
+    console.log(list.value)
+  }
+  else{
+    console.log(list.value)
+    printList(list.next)
+  }
+} 
+console.log(printList(list))
+  </script>
+</head>
+
+<body style="background-color:grey">
+  <br\>
+    <h4>see console</h4>
+</body>
+
+
+</html>
