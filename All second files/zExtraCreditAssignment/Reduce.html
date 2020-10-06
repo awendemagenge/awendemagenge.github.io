@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+  <meta charset="UTF-8" />
+  <title>constructin function</title>
+  <script>
+function reduce(arr,func,inti){
+    let accumulator=inti
+    for(let item of arr){
+        accumulator+=func(item)
+    }return accumulator
+}
+console.log(reduce([5,5,5,5,5],x=>x*2,0))
+
+
+
+  </script>
+</head>
+
+<body style="background-color:grey">
+  <br\>
+    <h4>see console</h4>
+</body>
+
+
+</html>
