@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head >
+  <meta charset="UTF-8" />
+  <title>constructin function</title>
+  <script>
+let node4 = {
+    name: "p",
+    children: null
+   };
+   let node5 = {
+    name: "label",
+    children: null
+   };
+   let node3 = {
+    name: "input",
+    children: null
+   };
+   let node2 = {
+    name: "div",
+    children: [node4, node5]
+   };
+   
+   let node1 = {
+     name: "body",
+     children: [node2, node3],
+   }
+   
+   function clasAdder(node){
+     if(node.children==null){
+      this.class="classNode"
+     }
+     else{  for(let item of node.children){
+       classAdder(item)
+     } 
+     }
+   }
+   console.log(classAdder(node1))
+
+
+
+
+  </script>
+</head>
+
+<body style="background-color:grey">
+  <br\>
+    <h4>see console</h4>
+</body>
+
+
+</html>
+   
