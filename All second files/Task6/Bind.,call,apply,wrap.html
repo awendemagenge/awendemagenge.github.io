@@ -55,6 +55,11 @@ let user = {
 askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 
 
+//partial application for login
+
+askPasswordd(() => user.login(true), () => user.login(false));
+
+
 
   </script>
 </head>
