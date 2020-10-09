@@ -18,6 +18,25 @@ function printNumbers(a, b) {
 
 
 
+  function printNumber(from, to) {
+  let now = from;
+
+  setTimeout(second, 1000);
+
+  function second(){
+    console.log(now);
+    if (now < to) {
+      setTimeout(second, 1000);
+    }
+    now++;
+  }
+}
+
+// usage:
+printNumber(5, 10);
+
+
+
   </script>
 </head>
 
