@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+  <meta charset="UTF-8" />
+  <title>constructin function</title>
+  <script>
+
+let animal = {
+    jumps: null
+  };
+  let rabbit = {
+    __proto__: animal,
+    jumps: true
+  };
+  
+  alert( rabbit.jumps ); // ? (1)
+  
+  delete rabbit.jumps;
+  
+  alert( rabbit.jumps ); // ? (2)
+  
+  delete animal.jumps;
+  
+  alert( rabbit.jumps ); // ? (3)
+  
+  //first true
+  //then null
+  //then undefined
+
+
+  </script>
+</head>
+
+<body style="background-color:grey">
+  <br\>
+    <h4>see console</h4>
+</body>
+
+
+</html>

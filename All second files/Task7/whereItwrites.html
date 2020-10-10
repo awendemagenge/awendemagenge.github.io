@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html lang="en">
+  
+  <head >
+    <meta charset="UTF-8" />
+    <title>constructin function</title>
+    <script>
+let animal = {
+    eat() {
+      this.full = true;
+    }
+  };
+  
+  let rabbit = {
+    __proto__: animal
+  };
+  
+  rabbit.eat();
+ //this in this case is refering to the rabbit not on animal because 
+ //this always represnts the object from the dot
+  
+  
+  
+  
+    </script>
+  </head>
+  
+  <body style="background-color:grey">
+    <br\>
+      <h4>see console</h4>
+  </body>
+  
+  
+  </html>
+     
