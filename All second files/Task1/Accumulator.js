@@ -7,14 +7,7 @@
     this.value1 = parseFloat(prompt("enter another value")) + this.value
   }
   
-  
-  
-  
-  
-  let accumulator = new Accumulator(1);  
-  
-  accumulator.value; 
-  accumulator.value1; 
+  let accumulator = new Accumulator();  
   
   alert(accumulator.value1);
 
