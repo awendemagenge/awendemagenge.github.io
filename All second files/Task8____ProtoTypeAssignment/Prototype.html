@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html lang="en">
+  
+  <head >
+    <meta charset="UTF-8" />
+    <title>constructin function</title>
+    <script>
+function Rabbit() {}
+Rabbit.prototype = {
+  eats: true
+};
+
+let rabbit = new Rabbit();
+
+Rabbit.prototype = {};
+
+alert( rabbit.eats ); 
+
+//alert(rabbit.eats) returns true   
+  
+  
+    </script>
+  </head>
+  
+  <body style="background-color:grey">
+    <br\>
+      <h4>see console</h4>
+  </body>
+  
+  
+  </html>

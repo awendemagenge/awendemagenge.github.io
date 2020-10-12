@@ -1,6 +1,12 @@
 "user-strict"
-function sayHi() {
-    console.log(this)
 
+
+  function logtime1(){
+ 
+  return "hghg"
 }
-setTimeout(sayHi, 5000);
+logtime1()
+
+setInterval(logtime1(),5000)
+
+
