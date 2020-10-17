@@ -1,4 +1,4 @@
-var winners = new Array();
+let winners = new Array();
 var player1Selections = new Array();
 var player2Selections = new Array();
 var timer;
@@ -17,10 +17,10 @@ function drawBoard() {
         Parent.removeChild(Parent.firstChild);
     }
 
-    for (s = 0; s < 3; s++) {
+    for (s = 0; s < 4; s++) {
         var row = document.createElement("tr");
         
-        for (r = 0; r < 3; r++) {
+        for (r = 0; r < 4; r++) {
             var col = document.createElement("td");
             col.id = counter;
 
@@ -55,7 +55,7 @@ function drawBoard() {
                     drawBoard();
                 }
 
-                else if (player2Selections.length + player1Selections.length == 9)
+                else if (player2Selections.length + player1Selections.length == 16)
                 {
                     reset();
                     drawBoard();
@@ -98,21 +98,29 @@ function reset()
 
 function loadAnswers()
 {
-    winners.push([1, 2, 3]);
-    winners.push([4, 5, 6]);
-    winners.push([7, 8, 9]);
-    winners.push([1, 4, 7]);
-    winners.push([2, 5, 8]);
-    winners.push([3, 6, 9]);
-    winners.push([1, 5, 9]);
-    winners.push([3, 5, 7]);
+    winners.push([1, 2, 3,4]);
+    winners.push([5, 6,7,8]);
+    winners.push([9,10,11,12]);
+    winners.push([13,14,15,16]);
+    winners.push([1,6,11,16]);
+    winners.push([16,11,6,1]);
+    winners.push([1, 5, 9,13]);
+    winners.push([13,9,5,1]);
+    winners.push([2,6,10,14]);
+    winners.push([14,10,6,2]);
+    winners.push([3,7,11,15]);
+    winners.push([15,11,7,3]);
+    winners.push([4,8,12,16]);
+    winners.push([16,12,8,4]);
+
+
 }
 
 function checkWinner() {
     // check if current player has a winning hand
     // only stsrt checking when player x has size number of selections
-    var win = false;
-    var playerSelections = new Array();
+    let win = false;
+    let playerSelections = new Array();
 
     if (currentPlayer == 0)
         playerSelections = player1Selections;
