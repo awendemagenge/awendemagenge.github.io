@@ -69,10 +69,24 @@ class library {
             if (this.members[i].id === id) return this.members[i];
         }
     }
-    checkOut(books, members, checkOut=new Date()) {
+    checkOut(books, members, checkOut = new Date()) {
         let loan = new Loan(books, checkOut)//{datecheckedout:676,book:"jhhj"}
         members.checkOut.push(loan)
     }
+    returnDat(book, member, ReturnDate = new Date()) {
+        let loans;
+        for (let item of member.checkOut) {
+            if (item.book === book) {
+                loans = item
+            }
+            member.balance = loans.computeCharge(ReturnDate) + member.balance
+            member.checkOut.splice(member.checkOut.indexOf(item), 1)
+        }
+
+
+    }
+
+
 
 }
 
@@ -92,7 +106,7 @@ class Book {
 class member {
     constructor(memberName, balance = 0, phone) {
         this.memberName = memberName;
-        this._balance = balance;
+        this.balance = balance;
         this.checkOut = [];
         this.Phone = phone;
     }
@@ -156,7 +170,8 @@ let loan = new Loan(book)
 let lib = new library();
 uploadBooks(lib);
 uploadMember(lib);
-lib.checkOut(lib.books[1],lib.members[1])
+lib.checkOut(lib.books[1], lib.members[1],(new Date(2020,8,29)))
+lib.returnDat(lib.books[1], lib.members[1])
 console.log(lib);
 
 
